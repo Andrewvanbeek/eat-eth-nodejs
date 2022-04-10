@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <script defer src="face-api.min.js"></script> -->
+  <!-- <script defer src="script.js"></script> -->
+  <title>Face Recognition</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body class="container mx-auto px-20">
+  <div class="navbar bg-base-100">
+    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+  </div>
+  <!-- <div class="grid grid-cols-2">
+    <div>01</div>
+    <div><video autoplay></video></div>
+  </div> -->
+ 
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold">Login now!</h1>
+        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      </div>
+      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Email</span>
+            </label>
+            <input type="text" placeholder="email" class="input input-bordered">
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Password</span>
+            </label>
+            <input type="text" placeholder="password" class="input input-bordered">
+            <label class="label">
+              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+            </label>
+          </div>
+          <div class="form-control mt-6">
+            <button class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    const constraints = {
+      video: true,
+    };
+    
+    const video = document.querySelector("video");
+    
+    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+      video.srcObject = stream;
+    });
+    </script>
+
+
+  
+<!--   
+  <div class="bg-green-300 border-green-600 border-b p-4 m-4 rounded">
+    Hello World
+  </div>
+  <input type="file" id="imageUpload"> -->
+</body>
+</html>
